@@ -12,10 +12,10 @@ class RegisterView(generics.CreateAPIView):
 
 class PostListView(generics.ListAPIView):
     queryset=Post.objects.all()
-    serializer_class = PostSerializer
+    serializer_class =PostDetailSerializer
 class PostDetailView(generics.RetrieveAPIView):
     queryset=Post.objects.all()
-    serializer_class = PostDetailSerializer
+    serializer_class = PostSerializer
 
 class PostCreateView(generics.CreateAPIView):
     queryset=Post.objects.all()
